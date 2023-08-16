@@ -1,0 +1,20 @@
+EJ 9
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Escriba una palabra");
+            string palabra = Console.ReadLine();
+            Console.Clear();    
+            Console.WriteLine(palabra.ToUpper());
+            Console.WriteLine(palabra.ToLower());
+            char[]charArray = palabra.ToCharArray();
+            Array.Reverse(charArray);
+            string reversedString = new string(charArray);
+            Console.WriteLine(reversedString);
+        }
+    }
+}
