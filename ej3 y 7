@@ -1,0 +1,88 @@
+Ej 7
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int op = -1;
+            while(op != 0) { 
+            Console.Clear();
+            Console.WriteLine("Calculadora");
+            Console.WriteLine("Elija una operacion");
+            Console.WriteLine("1 Multiplicacion");
+            Console.WriteLine("2 Suma");
+            Console.WriteLine("3 Resta");
+            Console.WriteLine("4 Division");
+                op = int.Parse(Console.ReadLine());
+                Console.WriteLine("Ingrese dos numeros a operacionar");
+                double n1 = int.Parse(Console.ReadLine());
+                double n2 = int.Parse(Console.ReadLine());
+                double res = 0;
+                switch (op)
+                {
+                    case 1:
+                        Console.Clear();
+                        Console.WriteLine("Multiplicacion");
+                        res = n1 * n2;
+                        Console.WriteLine(res);
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Console.WriteLine("Suma");
+                        res = n1 + n2;
+                        Console.WriteLine(res);
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Console.WriteLine("Resta");
+                        res = n1 - n2;
+                        Console.WriteLine(res);
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Console.WriteLine("Division");
+                        res = n1 / n2;
+                        Console.WriteLine(res);
+                        break;
+                    default:
+                        break;
+                }
+                Console.ReadKey();
+
+            }
+        }
+    }
+}
+
+
+
+EJ 3
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("ESCRIBI DOS NUMEROS");
+            double numero1 = int.Parse(Console.ReadLine());
+            double numero2 = int.Parse(Console.ReadLine());
+            if (numero2 < numero1)
+            {
+                double aux = numero2;
+                numero2 = numero1;
+                numero1 = aux;
+            }
+            for (double i = numero1; i < numero2; i++)
+            {
+                if (i % 33 == 0)
+                {
+                    Console.WriteLine(i + " es div de 33" + i + i);
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
